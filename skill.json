@@ -1,0 +1,49 @@
+{
+  "name": "genpark-episodic-memory-consolidation-decay-skill",
+  "version": "1.0.0",
+  "description": "Biological Sleep-Cycle & Ebbinghaus Forgetting Curve Episodic-to-Semantic Memory Consolidation Engine. Decays stale transient interactions and consolidates frequent episodic events into enduring semantic user persona traits.",
+  "tools": [
+    {
+      "name": "manage_episodic_memory",
+      "description": "Manage agent episodic memory events, temporal decay calculation, sleep-cycle consolidation, and semantic persona extraction.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "record_event",
+              "apply_temporal_decay",
+              "consolidate_sleep_cycle",
+              "query_memory",
+              "evict_decayed"
+            ],
+            "description": "The memory management action."
+          },
+          "content": {
+            "type": "string",
+            "description": "Memory event content or query string."
+          },
+          "importance": {
+            "type": "number",
+            "description": "Subjective importance weight (1 to 10)."
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Categorical tags (e.g. ['preference', 'health', 'schedule'])."
+          },
+          "elapsed_hours": {
+            "type": "number",
+            "description": "Simulated or actual elapsed hours for decay testing."
+          }
+        },
+        "required": [
+          "action"
+        ]
+      }
+    }
+  ]
+}
